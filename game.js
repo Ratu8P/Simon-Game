@@ -21,17 +21,16 @@ function nextSequence() {
         playSound(randomChosenColour);
     }, 200);
     userClickedPattern = 0;
+    console.log(gamePattern);
 }
     
 
 function animatePress(currentColour) {
-    if (level !== 0) {
-        $("#" + currentColour).addClass("pressed");
-        setTimeout(function() {
-            $("#" + currentColour).removeClass("pressed");
-        }, 100);
-    }
-
+    
+    $("#" + currentColour).addClass("pressed");
+    setTimeout(function() {
+        $("#" + currentColour).removeClass("pressed");
+    }, 100);
 }
 
 function checkAnswer(game, userChosenColour) {
@@ -49,7 +48,7 @@ function checkAnswer(game, userChosenColour) {
             $("body").removeClass("game-over");
         }, 2000);
         // startOver();
-        level = 0;
+        level = 1;
         started = false;
         $(document).keypress(function() {
             gameStart();
