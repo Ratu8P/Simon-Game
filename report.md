@@ -260,3 +260,283 @@ It offers convenience, but not core business value.
 The engine is already built
 
 What remains is integrating it into real workflows and validating impact with pilot users.
+
+-------------------------------------------------------------------------------------------------------------------
+
+II. Application 3 — Finding Similar Issues & Past Solutions
+Highest-Value Use Case (Recommend Positioning First)
+Current Pain Points
+
+JIRA search is keyword-based and often ineffective for technical cases.
+
+Engineers open many tickets manually to judge similarity.
+
+20–30%+ of all issues are recurring or nearly identical.
+
+Result: hours lost, past solutions forgotten, repeated debugging.
+
+What JIRAG Already Does
+
+Matches a new symptom to similar historical cases within seconds.
+
+Highlights only confirmed root causes and verified solutions.
+
+Provides actionable steps so engineers can assess relevance quickly.
+
+Impact:
+Reduces “find past context and solutions” from hours → minutes, directly avoiding duplicate work.
+
+What This Enables Next
+
+Automatic suggestions when a new ticket is created
+
+“Here are similar past issues and how they were resolved.”
+
+External submitters may solve simple issues without engineering involvement.
+
+Consolidated knowledge articles
+
+For recurring issues, JIRAG can auto-produce a standardized reference for onboarding and troubleshooting.
+
+Development Timeline (Single Developer)
+
+Pilot testing: 2–3 weeks
+
+Backend integration with JIRA: 5–7 weeks
+
+Trigger recommendations on ticket creation
+
+No UI redesign required
+
+III. Application 2 — Automatically Identifying the Right Owner
+High Impact for Customer / External Tickets (10–15% of all JIRA)
+Current Pain Points
+
+External submitters often do not know the correct owner.
+
+Tickets bounce between teams for days.
+
+High-priority tickets get delayed and engineering load increases.
+
+What JIRAG Already Does
+
+Identifies which engineers handle specific technologies or error types.
+
+Shows who historically solved similar problems.
+
+Provides a ranked expert list with supporting historical cases.
+
+Impact:
+Improves first-time ticket assignment, reduces routing delays, and clarifies “real ownership” across teams.
+
+Next-Step Opportunities
+
+Expert recommendations on ticket creation
+
+Backend-generated suggested owners.
+
+Knowledge concentration mapping
+
+Helps leadership understand skill bottlenecks and plan training or hiring.
+
+Development Timeline (Single Developer)
+
+Business rule tuning: 2–3 weeks
+
+Workflow integration into ticket creation: 5–7 weeks
+
+IV. Application 1 — Ticket Summarization
+Low Priority / Nice-to-Have
+Conclusion From Leadership & Engineering Feedback
+
+Summaries are helpful but not a core need.
+
+Engineers prefer reading key comments themselves.
+
+Value is modest compared with Applications 2 and 3.
+
+Recommendation
+
+Keep current functionality as an optional add-on.
+
+No additional development investment needed unless demand increases.
+
+Overall Development Plan (Single Developer)
+Stage	Focus	Time Estimate
+Phase 1	Pilot + Tuning for Applications 3 and 2	4–6 weeks
+Phase 2	Backend integration with JIRA workflows	6–10 weeks
+Phase 3	Optional enhancements (knowledge articles, deeper analytics)	As needed
+Total for Core Product (Apps 2 & 3): 10–16 weeks, realistic for one developer.
+Why This Project Matters
+
+Direct reduction of repeated debugging work
+
+Faster and more accurate ticket assignment
+
+Less load on engineering from external tickets
+
+Better use of organizational knowledge rather than rediscovering solutions
+
+JIRAG turns our historical data into a productivity asset.
+Applications 3 and 2 deliver immediate, measurable value and should be prioritized.
+
+Phase 1 — Pilot Readiness & Core Validation
+Duration: 6–8 weeks
+Goal:
+
+Make the system reliable and usable for a small pilot group, focusing on the two high-value applications:
+
+Finding similar issues & past solutions
+
+Identifying the right owner / expert
+
+Key Deliverables:
+1. Strengthen Data Foundation (Weeks 1–2)
+
+Ensure all historical JIRA issues can be consistently processed
+
+Improve accuracy of similarity results
+
+Make expert identification more predictable and stable
+
+Validate that the system performs well even with large ticket volumes
+
+2. Produce Reliable “Similar Issue” Results (Weeks 2–4)
+
+Improve the matching quality for recurring issues
+
+Ensure recommended past solutions are relevant and easy to follow
+
+Add logic that prefers “verified final solutions” over exploratory attempts
+
+Collect 10–15 test cases from engineers to verify output quality
+
+3. Produce Reliable “Expert Recommendation” Results (Weeks 3–5)
+
+Refine the logic that identifies which engineers typically resolve certain problems
+
+Clarify categories for different types of ownership
+
+Validate with managers that the suggestions align with real-team responsibilities
+
+4. Internal Pilot Tools for 1–2 Teams (Weeks 5–8)
+
+Provide a simple interface (CLI or basic backend workflow) for teams to try
+
+Document examples so engineers know how to ask questions
+
+Collect notes on accuracy, usefulness, and time saved
+
+Pilot Success Criteria:
+
+Engineers can consistently find relevant historical cases
+
+Suggested experts match real organizational experience
+
+5–10 real examples showing reduced investigation or routing time
+
+Phase 2 — Workflow Integration & Operationalization
+Duration: 8–12 weeks
+Goal:
+
+Make JIRAG part of daily work by connecting it to ticket creation and assignment flows, without changing any UI.
+
+Key Deliverables:
+1. Automatic Suggestions for Similar Issues (Weeks 1–5)
+
+When a new ticket is filed, automatically search similar past cases
+
+Provide a short, clear list of:
+
+“Most similar issues”
+
+“How they were solved”
+
+Allow teams to quickly evaluate whether the issue is recurring
+
+Support cases where external submitters can try recommended steps themselves
+
+2. Automatic Expert Recommendation (Weeks 3–8)
+
+When a ticket is created or reassigned, generate a ranked list of potential owners
+
+Ensure suggestions reflect:
+
+Historical experience
+
+Typical ownership patterns
+
+Help support teams and customers assign tickets correctly the first time
+
+3. Reliability & Quality Tuning (Weeks 6–10)
+
+Expand test coverage with more teams
+
+Collect real routing time examples before/after JIRAG
+
+Adjust rules to match expectations from engineering managers
+
+4. Operational Metrics (Weeks 8–12)
+
+Track how often recommendations are used
+
+Track how often recommended experts match the eventual assignee
+
+Document examples where investigation time was reduced
+
+Outcome of Phase 2:
+
+JIRAG is now actively contributing to shorter investigation time and improved ticket routing in production workflows.
+
+Phase 3 — Knowledge Consolidation & Organizational Adoption
+Duration: 8–12 weeks (optional, based on business need)
+Goal:
+
+Turn recurring issues and expertise patterns into organizational knowledge.
+
+Key Deliverables:
+1. Creating Standardized “Knowledge Entries” for Recurring Issues (Weeks 1–6)
+
+Automatically consolidate repeating problems
+
+Produce clear entries describing:
+
+What the issue is
+
+Why it happens
+
+How it is usually fixed
+
+Who usually handles it
+
+Useful for new hires, onboarding, and cross-team alignment
+
+2. Expertise Mapping Across the Organization (Weeks 4–8)
+
+Show which areas rely heavily on a few people
+
+Identify where knowledge is too concentrated
+
+Help leaders plan:
+
+Training
+
+Hiring
+
+Risk mitigation
+
+3. Broader Rollout to More Teams (Weeks 6–12)
+
+Provide training and explanations
+
+Create a lightweight onboarding guide
+
+Gather feedback to prepare for long-term maintenance
+
+Summary of the Whole Roadmap (Single Developer)
+Phase	Main Goal	Key Outcomes	Estimated Time
+Phase 1	Build stable foundation + pilot	High-quality similar-issue search and expert recommendations	6–8 weeks
+Phase 2	Integrate into ticket workflows	Automatic suggestions for similar cases and experts	8–12 weeks
+Phase 3 (optional)	Organization-wide knowledge system	Knowledge entries, expertise maps, broader rollout	8–12 weeks
+
+Total (Core Functions Only): 14–20 weeks
