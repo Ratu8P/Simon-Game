@@ -539,4 +539,60 @@ Phase 1	Build stable foundation + pilot	High-quality similar-issue search and ex
 Phase 2	Integrate into ticket workflows	Automatic suggestions for similar cases and experts	8–12 weeks
 Phase 3 (optional)	Organization-wide knowledge system	Knowledge entries, expertise maps, broader rollout	8–12 weeks
 
+
+
+--------------------------------------------------------------------------------------------------------------------------
+Phase 1 – Build the Knowledge Base
+
+Goal: Create the structured “brain” that powers all features.
+Estimate: 50–70 hours
+
+Turn existing tickets into a reusable knowledge base (problems, investigations, final solutions).
+
+Link related issues so the system can see “families” of similar problems.
+
+Outcome:
+A solid foundation so “similar issues” and “expert recommendation” both work reliably.
+
+Phase 2 – Application 3: Similar Issues & Past Solutions
+
+Goal: Make it easy to reuse past work instead of re-debugging.
+Estimate: 60–80 hours
+
+Find the most similar historical issues for a new problem.
+
+Highlight confirmed solutions, not just guesses.
+
+Present clear steps engineers can try first.
+
+Outcome:
+Cuts “searching and rediscovering” from hours down to minutes for recurring issues.
+
+Phase 3 – Application 2: Expert / Owner Recommendation
+
+Goal: Get tickets to the right person faster, especially external/customer tickets.
+Estimate: 40–60 hours
+
+Identify who usually solves certain types of problems.
+
+Provide a ranked list of suggested owners for new issues.
+
+Outcome:
+Reduces ticket ping-pong between teams and speeds up response on high-priority issues.
+
+Phase 4 – Workflow Integration (Backend Only)
+
+Goal: Make JIRAG run automatically when tickets are created.
+Estimate: 40–60 hours
+
+Automatically suggest similar issues for new tickets.
+
+Automatically suggest likely owners.
+
+No UI redesign; all integration is backend-only.
+
+Outcome:
+Engineers and support teams see recommendations “for free” as part of their normal workflow.
+--------------------------------------------------------------------------------------------------------------------------
+
 Total (Core Functions Only): 14–20 weeks
